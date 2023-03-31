@@ -1,0 +1,85 @@
+html {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  font-weight: 200;
+  background: #000;
+  /* background-image: url(https://steamuserimages-a.akamaihd.net/ugc/793118374724079159/1036EB815DED2F84CE7AF59E1C7745EA961C04BD/?imw=512&amp;imh=341&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true); */
+}
+body {
+  margin: 0;
+  
+}
+.panels {
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+.panel {
+  margin: 0;
+  color:white;
+  text-align: center;
+  transition: 
+    font-size 0.7s ease-in-out,
+    flex 0.7s ease-in-out, 
+    background 0.2s;
+
+  background-size: cover;
+  background-position: center;
+  
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  
+}
+
+
+.panel1 {
+  background-image: url(https://steamuserimages-a.akamaihd.net/ugc/793118374724079159/1036EB815DED2F84CE7AF59E1C7745EA961C04BD/?imw=512&amp;imh=341&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true);
+}
+.panel2 {
+  background-image: url(https://sun6-20.userapi.com/NnGbLH-CzRcJ3WOIYvPWGIdLO9fJPvvJdT7pdw/XfXpncZ2PnE.jpg);
+}
+.panel3 {
+  background-image: url(https://sun1-16.userapi.com/c849528/v849528730/15dfe7/nXeQdvVBsrQ.jpg);
+}
+.panel4 {
+  background-image: url(https://static.hltv.org/images/galleries/11906-full/1567876091.8547.jpeg);
+}
+.panel5 {
+  background-image: url(https://virtus-img.cdnvideo.ru/images/as-is/plain/63/63a0f8f503bb61e9540809099bf59940.jpg@jpg);
+}
+
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform .2s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panel > *:first-child {transform: translateY(-100%);}
+.panel.open-active > *:first-child {transform: translateY(0);}
+.panel > *:last-child {transform: translateY(100%);}
+.panel.open-active > *:last-child {transform: translateY(0);}
+
+.panel p {
+  text-transform: uppercase;
+  font-size: 2em;
+  text-shadow: rgb(20, 254, 28) 1px 0 10px;
+}
+panel p:nth-child(2){
+  font-size: 4em;
+}
+
+.panel.open {
+  flex: 5;
+  font-size: 40px;
+}
+.cta {
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Flex Panels</title>
+</head>
+<body>
+
+  <!-- s1mple https://steamuserimages-a.akamaihd.net/ugc/793118374724079159/1036EB815DED2F84CE7AF59E1C7745EA961C04BD/?imw=512&amp;imh=341&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true -->
+  <!-- arena https://sun1-16.userapi.com/c849528/v849528730/15dfe7/nXeQdvVBsrQ.jpg -->
+  <!-- winners https://sun6-20.userapi.com/NnGbLH-CzRcJ3WOIYvPWGIdLO9fJPvvJdT7pdw/XfXpncZ2PnE.jpg -->
+  <!-- кубок https://static.hltv.org/images/galleries/11906-full/1567876091.8547.jpeg -->
+  <!-- zeus https://virtus-img.cdnvideo.ru/images/as-is/plain/63/63a0f8f503bb61e9540809099bf59940.jpg@jpg -->
+  <div class="panels">
+    <div class="panel panel1">
+      <p>the</p>
+      <p>one</p>
+      <p>player</p>
+    </div>
+    <div class="panel panel2"> 
+      <p>your</p>
+      <p>time</p>
+      <p>will come</p>
+    </div>
+    <div class="panel panel3">
+      <p>everyone</p>
+      <p>seen</p>
+      <p>this</p>
+    </div>
+    <div class="panel panel4">
+      <p>it's more</p>
+      <p>than</p>
+      <p>game</p>
+    </div>
+    <div class="panel panel5">
+      <p>they will</p>
+      <p>hear</p>
+      <p>about you</p>
+    </div>
+  </div>
+
+  <script>
+    const panels = document.querySelectorAll('.panel');
+    function toggleOpen() {
+      this.classList.toggle('open');
+    }
+    function toggleActive(e) {
+      // console.log(e.propertyName);
+      if (e.propertyName.includes('flex')) {
+        this.classList.toggle('open-active');
+      }
+    }
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+  </script>
+</body>
+</html>
